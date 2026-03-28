@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>#### TIET [ Student Portal ]</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── DESKTOP: exact frameset replica ── */
+html, body { height: 100%; overflow: hidden; }
+
+#layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+#top-frame {
+  height: 13.5%;
+  min-height: 60px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border: none;
+  width: 100%;
+  display: block;
+}
+
+#bottom-row {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+#left-frame {
+  width: 15.5%;
+  min-width: 140px;
+  flex-shrink: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: none;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+#detail-frame {
+  flex: 1;
+  border: none;
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ── MOBILE: slide-in sidebar ── */
+@media (max-width: 768px) {
+  html, body { overflow: auto; height: auto; }
+
+  #layout { height: auto; min-height: 100vh; overflow: visible; }
+
+  #top-frame {
+    height: 56px;
+    min-height: 56px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+  }
+
+  #bottom-row {
+    flex: none;
+    position: relative;
+    overflow: visible;
+    min-height: calc(100vh - 56px);
+  }
+
+  /* Sidebar becomes slide-in drawer */
+  #left-frame {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 220px;
+    height: calc(100vh - 56px);
+    z-index: 200;
+    background: #FDB813;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: 3px 0 10px rgba(0,0,0,0.3);
+  }
+
+  #left-frame.open { transform: translateX(0); }
+
+  /* Overlay behind open sidebar */
+  #sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 56px; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.35);
+    z-index: 150;
+  }
+  #sidebar-overlay.show { display: block; }
+
+  /* Main content takes full width */
+  #detail-frame {
+    width: 100%;
+    height: auto;
+    min-height: calc(100vh - 56px);
+    overflow: visible;
+  }
+
+  /* Hamburger button */
+  #menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 22px;
+    left: 16px;
+    width: 52px;
+    height: 52px;
+    background: #a43f06;
+    border-radius: 50%;
+    z-index: 300;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.35);
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  #menu-btn svg { width: 26px; height: 26px; fill: white; }
+}
+
+/* Hide hamburger on desktop */
+@media (min-width: 769px) {
+  #menu-btn { display: none; }
+  #sidebar-overlay { display: none !important; }
+}
+</style>
+</head>
+<body>
+
+<div id="layout">
+  <iframe id="top-frame" name="TopFrame"
+    src="top.html" scrolling="no" frameborder="0"></iframe>
+
+  <div id="bottom-row">
+    <iframe id="left-frame" name="LeftFrame"
+      src="sidebar.html" scrolling="auto" frameborder="0"></iframe>
+
+    <iframe id="detail-frame" name="DetailSection"
+      src="alert.html" scrolling="auto" frameborder="0"></iframe>
+  </div>
+</div>
+
+<!-- Sidebar overlay (mobile tap-to-close) -->
+<div id="sidebar-overlay" onclick="closeSidebar()"></div>
+
+<!-- Hamburger FAB (mobile only) -->
+<button id="menu-btn" onclick="toggleSidebar()" aria-label="Menu">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <rect y="4" width="24" height="2.5" rx="1.2"/>
+    <rect y="10.75" width="24" height="2.5" rx="1.2"/>
+    <rect y="17.5" width="24" height="2.5" rx="1.2"/>
+  </svg>
+</button>
+
+<script>
+function toggleSidebar() {
+  var sidebar = document.getElementById('left-frame');
+  var overlay = document.getElementById('sidebar-overlay');
+  var isOpen = sidebar.classList.contains('open');
+  if (isOpen) {
+    closeSidebar();
+  } else {
+    sidebar.classList.add('open');
+    overlay.classList.add('show');
+  }
+}
+
+function closeSidebar() {
+  document.getElementById('left-frame').classList.remove('open');
+  document.getElementById('sidebar-overlay').classList.remove('show');
+}
+
+// Close sidebar when a link is clicked inside it (mobile nav)
+document.getElementById('left-frame').addEventListener('load', function() {
+  try {
+    var iframeDoc = this.contentDocument || this.contentWindow.document;
+    iframeDoc.addEventListener('click', function(e) {
+      var a = e.target.closest('a');
+      if (a && a.getAttribute('target') === 'DetailSection') {
+        closeSidebar();
+      }
+    });
+  } catch(e) {}
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,397 @@
+<html>
+<meta charset=utf-8>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+@media (max-width: 768px) {
+  .menutitle { font-size: 0.9em !important; padding: 2px !important; }
+  body { font-size: 12px; }
+}
+</style>
+<style>
+  :root {
+    --sf-img-1: url("data:image/gif;base64,R0lGODlhBwAFAPcAAMDAwAAAAAYAYAAAAAEAAAADAAAAAAAAAGAACAItDAAAYABiAJj3BgAAAAAAVQAAAF7oBgAAAAAAAAAAAGAAAACIBgcAUOgGANuA+3cA4P1/AOD9f3DqBgDbgPt3aE75d/////+A6gYAGgIAAAgAAACA6gYALLP4d3DR/Hf4Qfh30EH4dxTwBgAAAAAApK/oAAAAAADg5QYAUDyzd2DzBgACAAAAVQA6AFwAbQBpAGwAbwBuAGkAYwBcAHAAdQBiAGwAaQBjAF8AaAB0AG0AbABcAGoAYQB2AGEAcwBjAHIAaQBwAHQAXABtAGUAbgB1AFwAYQByAHIAbwB3AC4AZwBpAGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADQ6AYABwAAANND+XfYBwcAAAAHAAcAAABwggkAqOgGAAACAABg6gYA24D7dxhE+Xf/////cOoGABaY/HfYBwcAcCr4d5DtBgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhIIJABASCQAg0/x3AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA5OkGAAAAAACYmPh3AAAHAMghBwAAAAAAwOkGAIgGBwB06gYA24D7d9CY+Hf/////hOoGAOyc/Hd4EwcA0CEHAAEAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHABTwBgCJafh3kNH8d2Vp+HeEggkAAAAAAJSCCQACAAAAAAAAABASCQCQ6QYA+BEJAOzvBgDbgPt3qGr4d/////9s6gYAOmr4dwAAAABwggkAAAAAACH5BAEAACAALAAAAAAHAAUAAAgVAM0IHGgGBMGCIAwKTMgQIcOHIAICADs=");
+    --sf-img-2: url("data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7")
+  }
+</style>
+<style>
+  <!--BODY{scrollbar-arrow-color:black;scrollbar-track-color:darkpink}
+  -->
+</style>
+<style>
+  .menutitle {
+    cursor: pointer;
+    margin-bottom: 4px;
+    background-color: white;
+    color: #008AB8;
+    width: 125px;
+    padding: 1px;
+    text-align: Left;
+    font-weight: bold;
+    font: 1.0em Georgia, "Times New Roman", Times, serif;
+    border: 5px solid #008AB8
+  }
+</style>
+<meta name=referrer content=no-referrer>
+</head>
+
+<body vlink=#00000b link=#00000b bgcolor=#FDB813 leftmargin=1 topmargin=0 marginheight=0 marginwidth=0>
+  <table cellspacing=0 width=98% align=center bgcolor=peru valign=top style=LEFT:6px;TOP:2px>
+    <tbody bgcolor=#FDB813>
+      <tr>
+        <td>
+          <font color=#fce9c5 size=3><strong>Available options</strong></font>
+      </tr>
+      <tr>
+        <td><img height=2
+            src="data:image/gif;base64,R0lGODlh1gEBAPcAAAAA/wAG/wAM/woA/wAX/wAa/wAc/x4A/wAh/wAn/wAo/wAt/wA1/wA5/wA9/ycA/ykA/y8A/zEA/zQA/zoA/z0A/wBJ/wBO/wBR/wBU/wBY/wBd/wBl/wBy/wB0/wB5/wB+/1EA/1oA/2IA/2YA/2gA/2wA/3IA/30A/wD/EgD/HBT/Ghv/FAD/IQD/JQb/IQD/KwD/MSD/FDb/Bzv/AgD/SQD/VgD/WAD/XwD/YQD/ZQD/aAD/bwD/cAD/ekL/AET/AEv/AFL/AFj/AGv/AHL/AHX/AHn/AH3/AACD/wCI/wCT/wCV/wCZ/wCe/wCh/wCo/wCt/wCw/wC5/wD/jwD/kgD/lgD/mAD/nQD/pQD/rQD/sgD/tQD/ugD/vQDA/wDH/wDK/wDM/wDQ/wDZ/wDe/wD/wQD/2QDh/wDk/wDo/wDu/wD/6gD+7ADx/gD2+AD1/wD+8AD+9AD/+v8BAP8EAP8EBf8FCP8JAP8OAP8EFf8RAP8UAP8ZAP8cAP8FMP8FPP8hAP8lAP8oAP8tAP8xAP86AP88AP8FR/8FS/8FTP8FU/8FVf8FW/8GYv8FZv8Faf8Fbv8Ecf8Fdv8Fef9AAP9KAP9OAP9RAP9ZAP9eAP9jAP9lAP9oAP9tAP9zAP91AP94AP9+AIIA/4QA/4sA/5EA/5gA/6EA/6UA/6gA/60A/7EA/7QA/7kA/70A//8Dgf8Dj/8DlP8BrP8Asv8AtP8Auf8AvsIA/80A/9UA/9oA/9wA//8Axf8Ayv8A1/8A3eEA/+kA/+0A//4A4P8A5f8A6P0A7fAA//UA//wA8/sA+fkA/vwA/4H/AIn/AJH/AJX/AJj/AKH/AKb/AKj/AKz/ALX/ALn/ALz/AP+BAP+EAP+IAP+NAP+TAP+VAP+ZAP+dAP+mAP+qAP+yAP+1AP+5AP+8AMH/AMn/AMz/ANH/ANr/AN3/AP/DAP/KAP/MAP/SAP/UAP/ZAP/cAOP/AOz/AP/kAP/qAP/tAPH/APX/AP/wAPn/AP76AP7+ACH/C05FVFNDQVBFMi4wAwHoAwAh/h1CdWlsdCB3aXRoIEdJRiBNb3ZpZSBHZWFyIDIuNQAh+QQABgAAACwAAAAA1gEBAAAI/gDtCBw4sA4gRQgTKkLEKJKkhxAd1rplq6JFW76MEdvIcSOzjyA/NkM2rKTJksJ4qVy58pWrlzBdvWKFKpXNm6pI6dypc1QpEySCCiVhQsQECUiTHh0AoKnTpgIQGJhKdWoDBlizMlhwIYPXrxkwbPhAtixZEEyaqF2r9omUKHDjQhFDt25dMGXQ6N2LpkwaN4ADB47TprDhNnHObPHSpbHjLlauSJ5sJUsPHZgz6+Bhw0WLz6BbvKABpLRpID+GODPCunWRaLBjx4ZGrZrt27atYdvNe3e2dOqCC1eXbl2748iR79PHvLk+e/+iS5fuL5/169fpad++fV48eeDDSMuDR768+XPm0qs3h56c+/fvwcmfH47btvv4Q4HaD+rTJk4ActKJJpgUaGAlCFZiCCEMFiKIHxBC2MceFOJRx4UX0qHhhnQEBAAh+QQABgAAACwAAAAA1gEBAAAI/gA5XcJEENOlSocqISTEsNAgPxAj5tmzJw+dOhgzasRop6NHj38YKRpJUtGiSZJSqpTkaNYtWzBj1vJVDBixmziJLWPGsyfPZMOCCg0qbBevo0h3BcPlqqlTV69YpZpKdaopFKSyas16YgSJr2BJiIAgoaxZCRUGAFjLdq0ABAbiyjWAgIHdu3ctaMjAt2+GDSA+CB78wcOSJogTN2HyREqUx5CjfBkjprLlymTSoNnMGU0aN6BDg14Tp43p023knOHipYtr162xWLlCu/YVHzh06N6t44aKFsCDt4AxA4jx40BoDEFipLlzI8+kRZtOffo0a9Wya69mLRu27+C/VKdTR768unTr2qlfv16f+/fv+/2bT3++P3z58uvPx+8evf8A/jePPAQWSCA878Cj4IIKumPOgxBCSM6EFE5YTjjgZKghN9ps46GHoYAiYoiclGhiQAAh+QQABgAAACwAAAAA1gEBAAAI/gDNCTRXjpzBgwbFfQPHEFy4btq2SZQoCpRFi5wyauSEqaPHSiBBFiJEqJAgPyhT7lmZhw6dOjBjyqxjp6bNmnX0LEqkqGfPRIkkCR0qNJKsXraSKrV1qxixp1CJAWNGtSrVZsyGad26lZfXr19ztXJFtixZVKnSql1lahSpt3DfohhBoq7dEiUmSNjLV8KEAwACCw4cAIGBw4gNFGDQgIHjxwwcaMCQoXJlyh8ya9asxEmTz6A/S4lCujSUL2JSq04dZgya17Bhu5lNm/YbNm1y627DZkuX38C7mLli5Ypx41awUMmho7nzHTtaSJ8+XUYQINizAwmCxIj370WeSUUbT348NGnWqqlfrx6b+/fv0ambT59+vXb487djp6+/////BCiggPzkY+CBBt4zDz0MNkjPPPHII+GE8sTzDjwYZojhOwMJFBAAIfkEAAYAAAAsAAAAANYBAQAACP4A8wnMx+/ePHoIEyKUx7Ahw3jv4EmcKNGduYsYL54jx7Ejx3LjvIEbOfKbtm0oUWoDxRJUqE6cYsbshKmmTUuHKuksRKgnoT5+ggbdQ3QPnTpIkypFaqep06Z19CiaSnUqIkiSsmqV9CiWL1tgw4IFRqysWWLAlDFby5btsLdw3yILtouXXbu7guVq5aqv376pAgsOfGoUqcOID6MgwbgxYxMVIkiYTJnCAQCYM2c2wLkz5wILGIgeLdpBhtOoT2PoAOKD69cfkjhpQrs27Si4c+OeIqa3795hxqAZTnx4mTVukitP/qaN8+dt4sTx0qW69S5esli5wr37FSo6wk2LD98jhooW6NO7YCHkB5D373/8MEK/Pn1n0qLp369fWrX/AAJ4TTbYFGggNuioo+CC6qSTDjvtRChhO+zYo8+FGF64zz8cdtghPwMFBAAh+QQABgAAACwAAAAA1gEBAAAI/gDVCRyojl27gwgP1tunr6HDhv8iSpTIL5/Fixbx0dvIkaO8ePJCioz3Dp7JkyfNqVy5shy5lzBfjgNHs+Y3bdty5tQGqieoUJ42cRo6NBOmo0ctHarEtBChp4QC+ZnqJxCfPVjr0KnDtavXOnbCig1b5w6jRIrSqkUESZLbt5Iiwbplq67dusCKEdvLF9gxZoADA242rLBhw7x28VrMmJcuV5AjR1aVqrLlyihIad6sedQIEqBDkzBRQYLp0xImQADAunXrAggMyJ5tQEEDBrhzM2igAUOG38AvdPhAvDjxJE2SK1cepblz52PCiJlOXXoaNNizoymzxo33797fR7QZT568Fy5d0qv3oqXKlffwr1jBoaO+fR09YKhowb9/ixVABCiggEUcYcSBCB4hTTQMNtigNdVEKGE11FyDzYUYXoiOQAEBACH5BAAGAAAALAAAAADWAQEAAAj+AI0IHGjkCLRoCBMihEbNWrWHEKtdy4atosWK6jJqzJiOXbuPINuxq6evpEmT/f6pXKnSH758MGPCnEevps2a8nLqzBkPns+fP9+5M0e0aFFySJMiLfcNnNOn2rRtmzo1FKiroTxx2spV0yVMYDFdOlSprCFCaAv5Wcu2T549e/DQqUO3rl26dvLq1QuIkaK/gBM1oiSpsGFJj3rZWszYFq1fxCJLJgbsGLPLmDEjG8a5M2dhu3iJHs0rWCtXqFO7eqUqlevXqVCRGkWqtu3ZJkaQ2M27RIgHEoILl0ABgPHjxwkYWM7cQIEEDRhIn86gwQUNGbJrz8AhyYfv4D9SeHDSpLz5JkygRFnPPoqUMGLiy48fhgya+/jvq4Hjpr9/N2u0IeCAAs5hRhcIJtiFGVpc4eCDD/aQgw4UVrhDDSm0oOGGLbgQxA9AhCgiDUQEBAAh+QQABgAAACwAAAAA1gEBAAAI/gC7WLlCsKCVLD10KFyog4cNFy0iSmzxggaQixiB/BjizIjHj0WiiRw5Ehq1aihTorSGraXLltnSqZtJU126de1y6tS5T5/Pn/rs/RtKlKi/fEiTJqXHtGnTefHkSZ0qD57Vq1jPmdvK1ZxWcmDDhgVHtmw4btvSqg0Fqi2oT5s4yeXUSROmu3gr6a1kiJDfQoL8CBbcZ49hPHUSK16c2I7jx4/rAFJEubIiRIwiSdrMWXOtW7ZCi7blyxix06hPM1vNenUzZMNiy44tjJft27dfudrN29UrVqhSCR+uipTx48ZHlTJBorlzEiZETJBAvfr0AQCya88uAIGB7+C/RTdgQL48gwUXMqhfnwHDhg/w48MHwaSJ/fv2n0iJwr8/FDEABhggGGWgYeCBaJSRhhsMNthgHG1EKGEbcZyxhRddZKhhQAAh+QQABgAAACwAAAAA1gEBAAAI/gDFiCGTBo3Bg2jSuFnIcOGaOG0iSmwj5wwXL10yZsSIxcqVjyCv+MCho6RJHTdUtFjJsgWMGUBiygRCYwgSIzhzGnkmLZrPnz6nWatGtGg1a9mwKV2qNJ26p1DVpVvXrqpVq/qyatXa75/Xr1794ctHtmw+fvfoqV2rdp68t3DfwnsHr67duu7M6d27l5zfv37LhQNHuDA3bdsSJw4FqjFjTpAjc7qEqTKmS5UOVcpMqHOhQX5Ci86zZ08eOnVSq16d2o7r16//MFJEu7aiRZMk6d4tydGsW7aCC6/lqxgwYsiTE1vGrLnz5smGSZ8uXdguXtiz7wqGy5X3765eVrFKRb48eVMoSKlfr/7ECBLw45MQAUGC/fsSKgwAwL8/fwEIGCDggAYgwMCBCCJogQYZNOhgBhuA8MGEFH7gwRJNZKhhE0w8IUUUIIYYxRdjCGSiGAEBACH5BAAGAAAALAAAAADWAQEAAAj+ADNkwJDhg8GDB5U4acKwIUMpUSJKhPJFjMWLFsOMQcOxY0c3IEOGfMOmjcmTbdhs6cKyZRczV6xcmTnTChYqOXTo3LljR4ufQIHKCAKkqFEgQZAYWcq0yLNoUKNChSbNWrWrWK9i28qVKzp1YMOGrdeurNl27PSpXcv2n9u3b/nlm0t37r159PLqpTcvnry/gOXFewevsOHC78wpXry4HLnHkB+L+wauMrhw3bRt27xZFKjPnzmJHs0Jk+nTlVKnLkSIUCFBfmLL3kM7Dx06dXLr3l3Hju/fvuvoWZRIkXHjiRJJWs58eSRZvWxJn27rVjFi2LMTA8asu/fuzZhJDRtPnjyv8+jR52rlqr379qhSyZ+/ytQoUvjz40cxgoT//yWUMIEEBBYowQQHAKDgggoGgIABEEZoQAEMNMDAhRgy4IAGBAkUEAAh+QQABgAAACwAAAAA1gEBAAAI/gAlCJRA4QCAgwgRGljIcGGBBQwiSozoIIPFixYxdADxoaPHD0mcNBlJcmSUkyhPThHDsiXLMGPQyJwps8waNzhz4nzTpqfPNnHieOlCtGgXL1msXFnK9AoVHVCjQu0RQ0WLq1hdsBDyA4hXrz9+GBlLdqwzadHSqk0rrZrbt2+vZcNGty42dOry6lWXLh27doADt2NnT5/hw4b3/VvMmDG/fJAj5+N3bx69y5gvy9vMeXO8d/BCiw7tzpzp06bPkVvNenW5cd7AyZb9Tdu227e1gdoNKlQnTsCBd8JEvLilQ5WSFyLEnFAfP9Ch75m+h06d69izX7fDvTv3OnoUTokfLx4RJEno00t6FMuXrffw3wMjRr8+MWDKmOnfv3+Y///+IRPMLrwUWOAuweTSiisMNshgKhBGCOEpo5Bi4YUWokDChhxuaEIFEQgUEAAh+QQABgAAACwAAAAA1gEBAAAI/gBdCRzoSlWqgwgPoiDFsCHDUSNISJxIwkQFCRgzSpgAAYDHjx8LIDBAsqQBBQ0YqFzJoIEGDBliyrzQ4YPNmzaTNNnJk2eUn0CBjgkjpqhRomnQKF2KpswaN1CjQn3TpqpVq164dNnK1YuWKlfCir1iBYeOs2h19IChooXbty1WAJlLl26RI0by6j0iLZrfv3+tVRtMuBq1a9gSK06MTp3jx4/ZtZtMeXK9ffoya878r7Nnz/zyiR4tGh+906hRy4snr7XreO/gyZ4925zt27fLkdvNe/c4cMCDf9O2rXhxbaCSgwrlaROn588zYZo+3dKhStgLEdpOKJCf734CR/HZQ74OnTro06uvY6e9+/Z17jBKpKi+fUSQJOnfLykSrFu2BChggMAUQ8yBCAJzDDMMNshgM8NEKKGEvOzCy4UY8qKLQAEBADs="
+            width=80%>
+      </tr>
+      <tr>
+        <td>
+          <div id=masterdiv>
+
+            <!-- PERSONAL INFO -->
+            <div class=menutitle>Personal Info.&nbsp;<img
+                src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="7" height="5"><rect fill-opacity="0"/></svg>'
+                style="background-image:url('data:image/gif;base64,R0lGODlhBwAFAPcAAMDAwAAAAAYAYAAAAAEAAAADAAAAAAAAAGAACAItDAAAYABiAJj3BgAAAAAAVQAAAF7oBgAAAAAAAAAAAGAAAACIBgcAUOgGANuA+3cA4P1/AOD9f3DqBgDbgPt3aE75d/////+A6gYAGgIAAAgAAACA6gYALLP4d3DR/Hf4Qfh30EH4dxTwBgAAAAAApK/oAAAAAADg5QYAUDyzd2DzBgACAAAAVQA6AFwAbQBpAGwAbwBuAGkAYwBcAHAAdQBiAGwAaQBjAF8AaAB0AG0AbABcAGoAYQB2AGEAcwBjAHIAaQBwAHQAXABtAGUAbgB1AFwAYQByAHIAbwB3AC4AZwBpAGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADQ6AYABwAAANND+XfYBwcAAAAHAAcAAABwggkAqOgGAAACAABg6gYA24D7dxhE+Xf/////cOoGABaY/HfYBwcAcCr4d5DtBgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhIIJABASCQAg0/x3AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA5OkGAAAAAACYmPh3AAAHAMghBwAAAAAAwOkGAIgGBwB06gYA24D7d9CY+Hf/////hOoGAOyc/Hd4EwcA0CEHAAEAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHABTwBgCJafh3kNH8d2Vp+HeEggkAAAAAAJSCCQACAAAAAAAAABASCQCQ6QYA+BEJAOzvBgDbgPt3qGr4d/////9s6gYAOmr4dwAAAABwggkAAAAAACH5BAEAACAALAAAAAAHAAUAAAgVAM0IHGgGBMGCIAwKTMgQIcOHIAICADs=');background-size:100% 100%;background-repeat:no-repeat;width:7px;height:5px;display:inline-block">
+            </div>
+            <span class="submenu" id=sub1 style="display:none">
+              <img
+                src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="6"><rect fill-opacity="0"/></svg>'
+                style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:9px;height:6px;display:inline-block">&nbsp;<a
+                target=DetailSection href="alert.html">
+                <font face=Arial color=darkblue size=2>Personal Detail</font>
+              </a><br>
+
+              <img
+                src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="6"><rect fill-opacity="0"/></svg>'
+                style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:9px;height:6px;display:inline-block">&nbsp;<a
+                target=DetailSection href="alert.html">
+                <font face=Arial color=darkblue size=2>Qualification Detail</font>
+              </a><br>
+
+              <img
+                src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="6"><rect fill-opacity="0"/></svg>'
+                style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:9px;height:6px;display:inline-block">&nbsp;<a
+                target=DetailSection href="alert.html">
+                <font face=Arial color=darkblue size=2>Edit Info</font>
+              </a><br>
+
+              <img
+                src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="6"><rect fill-opacity="0"/></svg>'
+                style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:9px;height:6px;display:inline-block">&nbsp;<a
+                target=DetailSection href="alert.html">
+                <font face=Arial color=darkblue size=2>Bank Info</font>
+              </a><br>
+
+            </span>
+
+            <!-- SRS -->
+            <div class=menutitle>SRS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
+                src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="7" height="5"><rect fill-opacity="0"/></svg>'
+                style="background-image:url('data:image/gif;base64,R0lGODlhBwAFAPcAAMDAwAAAAAYAYAAAAAEAAAADAAAAAAAAAGAACAItDAAAYABiAJj3BgAAAAAAVQAAAF7oBgAAAAAAAAAAAGAAAACIBgcAUOgGANuA+3cA4P1/AOD9f3DqBgDbgPt3aE75d/////+A6gYAGgIAAAgAAACA6gYALLP4d3DR/Hf4Qfh30EH4dxTwBgAAAAAApK/oAAAAAADg5QYAUDyzd2DzBgACAAAAVQA6AFwAbQBpAGwAbwBuAGkAYwBcAHAAdQBiAGwAaQBjAF8AaAB0AG0AbABcAGoAYQB2AGEAcwBjAHIAaQBwAHQAXABtAGUAbgB1AFwAYQByAHIAbwB3AC4AZwBpAGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADQ6AYABwAAANND+XfYBwcAAAAHAAcAAABwggkAqOgGAAACAABg6gYA24D7dxhE+Xf/////cOoGABaY/HfYBwcAcCr4d5DtBgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhIIJABASCQAg0/x3AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA5OkGAAAAAACYmPh3AAAHAMghBwAAAAAAwOkGAIgGBwB06gYA24D7d9CY+Hf/////hOoGAOyc/Hd4EwcA0CEHAAEAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHABTwBgCJafh3kNH8d2Vp+HeEggkAAAAAAJSCCQACAAAAAAAAABASCQCQ6QYA+BEJAOzvBgDbgPt3qGr4d/////9s6gYAOmr4dwAAAABwggkAAAAAACH5BAEAACAALAAAAAAHAAUAAAgVAM0IHGgGBMGCIAwKTMgQIcOHIAICADs=');background-size:100% 100%;background-repeat:no-repeat;width:7px;height:5px;display:inline-block">
+            </div>
+            <span class="submenu" id=sub2 style="display:none">
+              <img
+                src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="6"><rect fill-opacity="0"/></svg>'
+                style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:9px;height:6px;display:inline-block">&nbsp;<a
+                target=DetailSection href="alert.html">
+                <font face=Arial color=darkblue size=2>New SRS Entry</font>
+              </a><br>
+
+              <img
+                src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="6"><rect fill-opacity="0"/></svg>'
+                style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:9px;height:6px;display:inline-block">&nbsp;<a
+                target=DetailSection href="alert.html">
+                <font face=Arial color=darkblue size=2>View sent SRS</font>
+              </a><br>
+
+            </span>
+
+            <!-- FEE DETAIL -->
+            <div class=menutitle>Fee Detail&nbsp;&nbsp;&nbsp;&nbsp;<img
+                src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="7" height="5"><rect fill-opacity="0"/></svg>'
+                style="background-image:url('data:image/gif;base64,R0lGODlhBwAFAPcAAMDAwAAAAAYAYAAAAAEAAAADAAAAAAAAAGAACAItDAAAYABiAJj3BgAAAAAAVQAAAF7oBgAAAAAAAAAAAGAAAACIBgcAUOgGANuA+3cA4P1/AOD9f3DqBgDbgPt3aE75d/////+A6gYAGgIAAAgAAACA6gYALLP4d3DR/Hf4Qfh30EH4dxTwBgAAAAAApK/oAAAAAADg5QYAUDyzd2DzBgACAAAAVQA6AFwAbQBpAGwAbwBuAGkAYwBcAHAAdQBiAGwAaQBjAF8AaAB0AG0AbABcAGoAYQB2AGEAcwBjAHIAaQBwAHQAXABtAGUAbgB1AFwAYQByAHIAbwB3AC4AZwBpAGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADQ6AYABwAAANND+XfYBwcAAAAHAAcAAABwggkAqOgGAAACAABg6gYA24D7dxhE+Xf/////cOoGABaY/HfYBwcAcCr4d5DtBgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhIIJABASCQAg0/x3AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA5OkGAAAAAACYmPh3AAAHAMghBwAAAAAAwOkGAIgGBwB06gYA24D7d9CY+Hf/////hOoGAOyc/Hd4EwcA0CEHAAEAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHABTwBgCJafh3kNH8d2Vp+HeEggkAAAAAAJSCCQACAAAAAAAAABASCQCQ6QYA+BEJAOzvBgDbgPt3qGr4d/////9s6gYAOmr4dwAAAABwggkAAAAAACH5BAEAACAALAAAAAAHAAUAAAgVAM0IHGgGBMGCIAwKTMgQIcOHIAICADs=');background-size:100% 100%;background-repeat:no-repeat;width:7px;height:5px;display:inline-block">
+            </div>
+            <span class="submenu" id=sub3 style="display:none">
+              <img
+                src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="6"><rect fill-opacity="0"/></svg>'
+                style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:9px;height:6px;display:inline-block">&nbsp;<a
+                target=DetailSection href="alert.html">
+                <font face=Arial color=darkblue size=2>Reg. Fee Info</font>
+              </a><br>
+
+              <img
+                src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="6"><rect fill-opacity="0"/></svg>'
+                style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:9px;height:6px;display:inline-block">&nbsp;<a
+                target=DetailSection href="alert.html">
+                <font face=Arial color=darkblue size=2>Fee Pay Confirmation</font>
+              </a><br>
+
+              <img
+                src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="6"><rect fill-opacity="0"/></svg>'
+                style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:9px;height:6px;display:inline-block">&nbsp;<a
+                target=DetailSection href="alert.html">
+                <font face=Arial color=darkblue size=2>Fee Receipt</font>
+              </a><br>
+
+              <img
+                src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="6"><rect fill-opacity="0"/></svg>'
+                style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:9px;height:6px;display:inline-block">&nbsp;<a
+                target=DetailSection href="alert.html">
+                <font face=Arial color=darkblue size=2>Pay Fee on-line</font>
+              </a><br>
+
+              <img
+                src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="6"><rect fill-opacity="0"/></svg>'
+                style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:9px;height:6px;display:inline-block">&nbsp;<a
+                target=DetailSection href="alert.html">
+                <font face=Arial color=darkblue size=2>On-line fee paid history</font>
+              </a><br>
+
+              <img
+                src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="6"><rect fill-opacity="0"/></svg>'
+                style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:9px;height:6px;display:inline-block">&nbsp;<a
+                target=DetailSection href="alert.html">
+                <font face=Arial color=darkblue size=2>HDFC Order Status tracker</font>
+              </a><br>
+
+            </span>
+
+            <!-- ACADEMIC INFO -->
+            <div class=menutitle>Academic Info.<img
+                src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="7" height="5"><rect fill-opacity="0"/></svg>'
+                style="background-image:url('data:image/gif;base64,R0lGODlhBwAFAPcAAMDAwAAAAAYAYAAAAAEAAAADAAAAAAAAAGAACAItDAAAYABiAJj3BgAAAAAAVQAAAF7oBgAAAAAAAAAAAGAAAACIBgcAUOgGANuA+3cA4P1/AOD9f3DqBgDbgPt3aE75d/////+A6gYAGgIAAAgAAACA6gYALLP4d3DR/Hf4Qfh30EH4dxTwBgAAAAAApK/oAAAAAADg5QYAUDyzd2DzBgACAAAAVQA6AFwAbQBpAGwAbwBuAGkAYwBcAHAAdQBiAGwAaQBjAF8AaAB0AG0AbABcAGoAYQB2AGEAcwBjAHIAaQBwAHQAXABtAGUAbgB1AFwAYQByAHIAbwB3AC4AZwBpAGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADQ6AYABwAAANND+XfYBwcAAAAHAAcAAABwggkAqOgGAAACAABg6gYA24D7dxhE+Xf/////cOoGABaY/HfYBwcAcCr4d5DtBgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhIIJABASCQAg0/x3AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA5OkGAAAAAACYmPh3AAAHAMghBwAAAAAAwOkGAIgGBwB06gYA24D7d9CY+Hf/////hOoGAOyc/Hd4EwcA0CEHAAEAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHABTwBgCJafh3kNH8d2Vp+HeEggkAAAAAAJSCCQACAAAAAAAAABASCQCQ6QYA+BEJAOzvBgDbgPt3qGr4d/////9s6gYAOmr4dwAAAABwggkAAAAAACH5BAEAACAALAAAAAAHAAUAAAgVAM0IHGgGBMGCIAwKTMgQIcOHIAICADs=');background-size:100% 100%;background-repeat:no-repeat;width:7px;height:5px;display:inline-block">
+            </div>
+            <span class="submenu" id=sub4 style="display:none">
+              <img
+                src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="6"><rect fill-opacity="0"/></svg>'
+                style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:9px;height:6px;display:inline-block">&nbsp;<a
+                target=DetailSection href="alert.html">
+                <font face=Arial color=darkblue size=2>Academic Document Status</font>
+              </a><br>
+
+              <img
+                src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="6"><rect fill-opacity="0"/></svg>'
+                style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:9px;height:6px;display:inline-block">&nbsp;<a
+                target=DetailSection href="alert.html">
+                <font face=Arial color=darkblue size=2>Pre Registration</font>
+              </a><br>
+
+              <img
+                src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="6"><rect fill-opacity="0"/></svg>'
+                style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:9px;height:6px;display:inline-block">&nbsp;<a
+                target=DetailSection href="alert.html">
+                <font face=Arial color=darkblue size=2>Send to HOD</font>
+              </a><br>
+
+              <img
+                src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="6"><rect fill-opacity="0"/></svg>'
+                style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:9px;height:6px;display:inline-block">&nbsp;<a
+                target=DetailSection href="alert.html">
+                <font face=Arial color=darkblue size=2>Pre. Reg. Subj.</font>
+              </a><br>
+
+              <img
+                src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="6"><rect fill-opacity="0"/></svg>'
+                style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:9px;height:6px;display:inline-block">&nbsp;<a
+                target=DetailSection href="alert.html">
+                <font face=Arial color=darkblue size=2>Hostel Choice Status</font>
+              </a><br>
+
+              <img
+                src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="6"><rect fill-opacity="0"/></svg>'
+                style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:9px;height:6px;display:inline-block">&nbsp;<a
+                target=DetailSection href="alert.html">
+                <font face=Arial color=darkblue size=2>My Attendance</font>
+              </a><br>
+
+              <img
+                src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="6"><rect fill-opacity="0"/></svg>'
+                style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:9px;height:6px;display:inline-block">&nbsp;<a
+                target=DetailSection href="alert.html">
+                <font face=Arial color=darkblue size=2>Subject Regtd.</font>
+              </a><br>
+
+              <img
+                src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="6"><rect fill-opacity="0"/></svg>'
+                style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:9px;height:6px;display:inline-block">&nbsp;<a
+                target=DetailSection href="alert.html">
+                <font face=Arial color=darkblue size=2>Subject Regtd. Details</font>
+              </a><br>
+
+              <img
+                src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="6"><rect fill-opacity="0"/></svg>'
+                style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:9px;height:6px;display:inline-block">&nbsp;<a
+                target=DetailSection href="alert.html">
+                <font face=Arial color=darkblue size=2>Summer Term Registration</font>
+              </a><br>
+
+            </span>
+
+            <!-- EXAM INFO -->
+            <div class=menutitle>Exam. Info.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
+                src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="7" height="5"><rect fill-opacity="0"/></svg>'
+                style="background-image:url('data:image/gif;base64,R0lGODlhBwAFAPcAAMDAwAAAAAYAYAAAAAEAAAADAAAAAAAAAGAACAItDAAAYABiAJj3BgAAAAAAVQAAAF7oBgAAAAAAAAAAAGAAAACIBgcAUOgGANuA+3cA4P1/AOD9f3DqBgDbgPt3aE75d/////+A6gYAGgIAAAgAAACA6gYALLP4d3DR/Hf4Qfh30EH4dxTwBgAAAAAApK/oAAAAAADg5QYAUDyzd2DzBgACAAAAVQA6AFwAbQBpAGwAbwBuAGkAYwBcAHAAdQBiAGwAaQBjAF8AaAB0AG0AbABcAGoAYQB2AGEAcwBjAHIAaQBwAHQAXABtAGUAbgB1AFwAYQByAHIAbwB3AC4AZwBpAGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADQ6AYABwAAANND+XfYBwcAAAAHAAcAAABwggkAqOgGAAACAABg6gYA24D7dxhE+Xf/////cOoGABaY/HfYBwcAcCr4d5DtBgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhIIJABASCQAg0/x3AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA5OkGAAAAAACYmPh3AAAHAMghBwAAAAAAwOkGAIgGBwB06gYA24D7d9CY+Hf/////hOoGAOyc/Hd4EwcA0CEHAAEAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHABTwBgCJafh3kNH8d2Vp+HeEggkAAAAAAJSCCQACAAAAAAAAABASCQCQ6QYA+BEJAOzvBgDbgPt3qGr4d/////9s6gYAOmr4dwAAAABwggkAAAAAACH5BAEAACAALAAAAAAHAAUAAAgVAM0IHGgGBMGCIAwKTMgQIcOHIAICADs=');background-size:100% 100%;background-repeat:no-repeat;width:7px;height:5px;display:inline-block">
+            </div>
+            <span class="submenu" id=sub5 style="display:block">
+
+              <img
+                src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="6"><rect fill-opacity="0"/></svg>'
+                style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:9px;height:6px;display:inline-block">&nbsp;<a
+                target=DetailSection href="marks.html">
+                <font face=Arial color=darkblue size=2>Exam Marks</font>
+              </a><br>
+
+              <img
+                src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="6"><rect fill-opacity="0"/></svg>'
+                style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:9px;height:6px;display:inline-block">&nbsp;<a
+                target=DetailSection href="grades.html">
+                <font face=Arial color=darkblue size=2>Exam Grades</font>
+              </a><br>
+
+              <img
+                src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="6"><rect fill-opacity="0"/></svg>'
+                style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:9px;height:6px;display:inline-block">&nbsp;<a
+                target=DetailSection href="cgpa.html">
+                <font face=Arial color=darkblue size=2>View SGPA/CGPA</font>
+              </a><br>
+
+            </span>
+
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td><img
+            src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><rect fill-opacity="0"/></svg>'
+            style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:15px;height:15px;display:inline-block">&nbsp;<a
+            title=FAQ href=https://webkiosk.thapar.edu/FAQ/FAQStud.HTML target=_New>
+            <font face=Arial color=darkblue size=2><strong>FAQ</strong></font>
+          </a></td>
+      </tr>
+      <tr>
+        <td><img
+            src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><rect fill-opacity="0"/></svg>'
+            style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:15px;height:15px;display:inline-block">&nbsp;<a
+            href=https://webkiosk.thapar.edu/timetable/Minor_MASt_MS.pdf target=_New>
+            <font face=Arial color=darkblue size=2><strong>Minor/MASt/MS Notice</strong></font>
+          </a></td>
+      </tr>
+      <tr>
+        <td><img
+            src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><rect fill-opacity="0"/></svg>'
+            style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:15px;height:15px;display:inline-block">&nbsp;<a
+            href=https://webkiosk.thapar.edu/timetable/UG-Ia.xls target=_New>
+            <font face=Arial color=darkblue size=2><strong>UG-1st Yr. Part-A TIMETABLE</strong></font>
+          </a></td>
+      </tr>
+      <tr>
+        <td><img
+            src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><rect fill-opacity="0"/></svg>'
+            style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:15px;height:15px;display:inline-block">&nbsp;<a
+            href=https://webkiosk.thapar.edu/timetable/UG-Ib.xls target=_New>
+            <font face=Arial color=darkblue size=2><strong>UG-1st Yr. Part-B TIMETABLE</strong></font>
+          </a></td>
+      </tr>
+      <tr>
+        <td><img
+            src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><rect fill-opacity="0"/></svg>'
+            style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:15px;height:15px;display:inline-block">&nbsp;<a
+            href=https://webkiosk.thapar.edu/timetable/UG-IIa.xls target=_New>
+            <font face=Arial color=darkblue size=2><strong>UG-2nd Yr.Part-I TIMETABLE</strong></font>
+          </a></td>
+      </tr>
+      <tr>
+        <td><img
+            src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><rect fill-opacity="0"/></svg>'
+            style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:15px;height:15px;display:inline-block">&nbsp;<a
+            href=https://webkiosk.thapar.edu/timetable/UG-IIb.xls target=_New>
+            <font face=Arial color=darkblue size=2><strong>UG-2nd Yr.Part-II TIMETABLE</strong></font>
+          </a></td>
+      </tr>
+      <tr>
+        <td><img
+            src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><rect fill-opacity="0"/></svg>'
+            style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:15px;height:15px;display:inline-block">&nbsp;<a
+            href=https://webkiosk.thapar.edu/timetable/UG-IIIa.xls target=_New>
+            <font face=Arial color=darkblue size=2><strong>UG-3rd Yr.Part-I TIMETABLE</strong></font>
+          </a></td>
+      </tr>
+      <tr>
+        <td><img
+            src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><rect fill-opacity="0"/></svg>'
+            style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:15px;height:15px;display:inline-block">&nbsp;<a
+            href=https://webkiosk.thapar.edu/timetable/UG-IIIb.xls target=_New>
+            <font face=Arial color=darkblue size=2><strong>UG-3rd Yr.Part-II TIMETABLE</strong></font>
+          </a></td>
+      </tr>
+      <tr>
+        <td><img
+            src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><rect fill-opacity="0"/></svg>'
+            style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:15px;height:15px;display:inline-block">&nbsp;<a
+            href=https://webkiosk.thapar.edu/timetable/UG-IVa.xls target=_New>
+            <font face=Arial color=darkblue size=2><strong>UG-4th Yr. TIMETABLE</strong></font>
+          </a></td>
+      </tr>
+      <tr>
+        <td><img
+            src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><rect fill-opacity="0"/></svg>'
+            style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:15px;height:15px;display:inline-block">&nbsp;<a
+            href=https://webkiosk.thapar.edu/timetable/MCA.xls target=_New>
+            <font face=Arial color=darkblue size=2><strong>MCA TIMETABLE</strong></font>
+          </a></td>
+      </tr>
+      <tr>
+        <td><img
+            src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><rect fill-opacity="0"/></svg>'
+            style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:15px;height:15px;display:inline-block">&nbsp;<a
+            href=https://webkiosk.thapar.edu/timetable/PG_ME_MTech.xls target=_New>
+            <font face=Arial color=darkblue size=2><strong>PG (ME/MTech) TIMETABLE</strong></font>
+          </a></td>
+      </tr>
+      <tr>
+        <td><img
+            src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><rect fill-opacity="0"/></svg>'
+            style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:15px;height:15px;display:inline-block">&nbsp;<a
+            href=https://webkiosk.thapar.edu/timetable/FREE_ELECTIVE_TUT.xls target=_New>
+            <font face=Arial color=darkblue size=2><strong>FREE ELECTIVE TUTORIALS</strong></font>
+          </a></td>
+      </tr>
+      <tr>
+        <td valign=Top><img
+            src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><rect fill-opacity="0"/></svg>'
+            style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:15px;height:15px;display:inline-block">&nbsp;<a
+            title="Change Password" href="alert.html" target=DetailSection>
+            <font face=Arial size=2 color=darkblue><strong>Change PIN</strong></font>
+          </a></td>
+      </tr>
+      <tr>
+        <td valign=Top><img
+            src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><rect fill-opacity="0"/></svg>'
+            style="background-image:url('data:image/gif;base64,R0lGODlhDwAPALMPAARoaABmZgAAAFyenmhoaGJiYgMxMejt7QVxcRtYWh1naRgfH5jBwf7+/lJSUv///yH5BAEAAA8ALAAAAAAPAA8AQARG8MlJKwg4B5CEKNKlYYCyLER1EGzbhmPGWPHWfdKhD4rh+x5QZVgZGI/HGUUUYzSesBjH44iOprjHCMFFKIKqhWcMJpofEQA7');background-size:100% 100%;background-repeat:no-repeat;width:15px;height:15px;display:inline-block">&nbsp;<a
+            title="Logout/Signout" href="login.html" target=_parent>
+            <font face=Arial size=2 color=darkblue><strong>Logout</strong></font>
+          </a></td>
+      </tr>
+  </table>
+
+  <script>
+    document.querySelectorAll('.menutitle').forEach(function (mt) {
+      mt.addEventListener('click', function () {
+        var next = this.nextElementSibling;
+        if (!next || next.className.indexOf('submenu') === -1) return;
+        var isOpen = next.style.display === 'block';
+        // Close all submenus
+        document.querySelectorAll('.submenu').forEach(function (s) { s.style.display = 'none'; });
+        // Open clicked one if it was closed
+        if (!isOpen) next.style.display = 'block';
+      });
+    });
+    // Exam. Info open by default
+    document.getElementById('sub5').style.display = 'block';
+  </script>
+</body>
+
+</html>

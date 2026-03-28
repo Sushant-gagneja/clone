@@ -1,0 +1,96 @@
+<html><meta charset=utf-8>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>#### TIET [ View Student Subject Marks (Eventwise) ] </title>
+<style>.sort-table{font:Icon;border:1px Solid ThreeDShadow;background:window;color:WindowText}.sort-table thead{background:ButtonFace}.sort-table td{padding:2px 5px}.sort-table thead td{border:1px solid;border-color:ButtonHighlight ButtonShadow ButtonShadow ButtonHighlight;cursor:default}.sort-table thead td:active{border-color:ButtonShadow ButtonHighlight ButtonHighlight ButtonShadow;padding:3px 4px 1px 6px}.sort-table thead td[_sortType=None]:active{border-color:ButtonHighlight ButtonShadow ButtonShadow ButtonHighlight;padding:2px 5px}.sort-arrow{width:11px;height:11px;background-position:center center;background-repeat:no-repeat;margin:0 2px}</style>
+<style>
+.tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;display:block;width:100%}
+@media(max-width:768px){body{font-size:13px}.sort-table td{padding:3px 4px;white-space:nowrap}select{max-width:160px;font-size:12px}input[type=submit]{padding:4px 12px;font-size:12px}}
+</style>
+<meta name=referrer content=no-referrer>
+<style>img[src="data:,"],source[src="data:,"]{display:none!important}</style>
+</head>
+<body alink=#ff00ff bgcolor=#fce9c5 rightmargin=0 leftmargin=0 topmargin=0 bottommargin=0>
+
+<table width=100% align=CENTER bottommargin=0 topmargin=0>
+<tbody><tr>
+<td align=middle><font color=#a52a2a style=FONT-SIZE:medium;FONT-FAMILY:verdana><b>Student Subject Marks (Eventwise)</b></font>
+</td>
+</tr>
+</table>
+
+<form name=frm onsubmit="showMarks(); return false;">
+<table width=100% rules=groups cellspacing=1 cellpadding=1 align=center border=1>
+<tbody><tr><td>&nbsp;<font color=black face=arial size=2><strong> Name:&nbsp;</strong></font>Sushant Gagneja[1025030509]
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color=black face=arial size=2><strong>Course/Branch:&nbsp;</strong></font>BE(COE)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color=black face=arial size=2><strong>Current Semester:&nbsp;</strong></font>2</tr>
+<tr><td>&nbsp;&nbsp;<font color=black face=arial size=2><strong>Exam Code</strong></font>
+ <select name=exam tabindex=0 id=exam style=WIDTH:120px>
+  <option selected value=ALL>ALL</option>
+  <option value=2526EVESEM>2526EVESEM</option>
+  <option value=2526ODDSEM>2526ODDSEM</option>
+ </select>
+ <input type=submit value=Show onclick="showMarks(); return false;"></tr>
+</table>
+</form>
+
+<div id="results-area" style="display:none">
+<div class="tbl-wrap">
+<table bgcolor=#fce9c5 class=sort-table id=table-1 width=100% bottommargin=0 rules=groups topmargin=0 cellspacing=0 cellpadding=0 border=1 align=center>
+<thead>
+<tr bgcolor=#ff8c00>
+ <td><b><font color=white>Sr.<br>No.</font></b><img src=data:, class=sort-arrow></td>
+ <td nowrap><b><font color=white>Exam Code</font></b><img src=data:, class=sort-arrow></td>
+ <td><b><font color=white>Subject(Code)</font></b><img src=data:, class=sort-arrow></td>
+ <td><b><font color=white>Event/ SubEvent</font></b><img src=data:, class=sort-arrow></td>
+ <td><b><font color=white>Full Marks</font></b><img src=data:, class=sort-arrow></td>
+ <td><b><font color=white>Obtained Marks</font></b><img src=data:, class=sort-arrow></td>
+ <td><b><font color=white>Weightage</font></b><img src=data:, class=sort-arrow></td>
+ <td _sorttype=undefined><b><font color=white>Effective Marks</font></b></td>
+ <td _sorttype=undefined><b><font color=white>Status</font></b></td>
+</tr>
+</thead>
+<tbody>
+ <tr><td> 1.</td><td>2526ODDSEM</td><td nowrap>CHEMISTRY(UCB009)</td><td>MST</td><td align=right>40         </td><td align=left>   19</td><td align=left>   30</td><td align=left>   14.25</td><td> <font color=red> </font></td></tr>
+ <tr><td> 2.</td><td>2526ODDSEM</td><td nowrap>CHEMISTRY(UCB009)</td><td>SES</td><td align=right>15         </td><td align=left>   11.5</td><td align=left>   10</td><td align=left>   7.66</td><td> <font color=red> </font></td></tr>
+ <tr><td> 3.</td><td>2526ODDSEM</td><td nowrap>ENERGY AND ENVIRONMENT(UEN008)</td><td>MST</td><td align=right>40         </td><td align=left>   24.5</td><td align=left>   30</td><td align=left>   18.37</td><td> <font color=red> </font></td></tr>
+ <tr><td> 4.</td><td>2526ODDSEM</td><td nowrap>ENERGY AND ENVIRONMENT(UEN008)</td><td>SES#OTH</td><td align=right>15         </td><td align=left>   13.5</td><td align=left>   15</td><td align=left>   13.5</td><td> <font color=red> </font></td></tr>
+ <tr><td> 5.</td><td>2526ODDSEM</td><td nowrap>ELECTRICAL &amp; ELECTRONIC ENGINEERING(UES013)</td><td>SES#LE1</td><td align=right>10         </td><td align=left>   7.25</td><td align=left>   10</td><td align=left>   7.25</td><td> <font color=red> </font></td></tr>
+ <tr><td> 6.</td><td>2526ODDSEM</td><td nowrap>ELECTRICAL &amp; ELECTRONIC ENGINEERING(UES013)</td><td>SES#LE2</td><td align=right>10         </td><td align=left>   7</td><td align=left>   10</td><td align=left>   7</td><td> <font color=red> </font></td></tr>
+ <tr><td> 7.</td><td>2526ODDSEM</td><td nowrap>ELECTRICAL &amp; ELECTRONIC ENGINEERING(UES013)</td><td>SES#QZ1</td><td align=right>10         </td><td align=left>   2</td><td align=left>   10</td><td align=left>   2</td><td> <font color=red> </font></td></tr>
+ <tr><td> 8.</td><td>2526ODDSEM</td><td nowrap>CHEMISTRY(UCB009)</td><td>ENDSEM</td><td align=right>70         </td><td align=left>   29</td><td align=left>   40</td><td align=left>   16.57</td><td> <font color=red> </font></td></tr>
+ <tr><td> 9.</td><td>2526ODDSEM</td><td nowrap>BOOT CAMP(UTA032)</td><td>ENDSEM</td><td align=right>100         </td><td align=left>   86</td><td align=left>   100</td><td align=left>   86</td><td> <font color=red> </font></td></tr>
+ <tr><td> 10.</td><td>2526ODDSEM</td><td nowrap>ELECTRICAL &amp; ELECTRONIC ENGINEERING(UES013)</td><td>ENDSEM</td><td align=right>100         </td><td align=left>   37</td><td align=left>   45</td><td align=left>   16.65</td><td> <font color=red> </font></td></tr>
+ <tr><td> 11.</td><td>2526ODDSEM</td><td nowrap>ENERGY AND ENVIRONMENT(UEN008)</td><td>SES#QZ1</td><td align=right>15         </td><td align=left>   6</td><td align=left>   15</td><td align=left>   6</td><td> <font color=red> </font></td></tr>
+ <tr><td> 12.</td><td>2526ODDSEM</td><td nowrap>CALCULUS FOR ENGINEERS(UMA022)</td><td>ENDSEM</td><td align=right>40         </td><td align=left>   22</td><td align=left>   40</td><td align=left>   22</td><td> <font color=red> </font></td></tr>
+ <tr><td> 13.</td><td>2526ODDSEM</td><td nowrap>PROGRAMMING FOR PROBLEM SOLVING(UES103)</td><td>MST</td><td align=right>30         </td><td align=left>   19</td><td align=left>   30</td><td align=left>   19</td><td> <font color=red> </font></td></tr>
+ <tr><td> 14.</td><td>2526ODDSEM</td><td nowrap>CHEMISTRY(UCB009)</td><td>SES#LE1</td><td align=right>20         </td><td align=left>   16</td><td align=left>   20</td><td align=left>   16</td><td> <font color=red> </font></td></tr>
+ <tr><td> 15.</td><td>2526ODDSEM</td><td nowrap>ELECTRICAL &amp; ELECTRONIC ENGINEERING(UES013)</td><td>MST</td><td align=right>50         </td><td align=left>   21.5</td><td align=left>   25</td><td align=left>   10.75</td><td> <font color=red> </font></td></tr>
+ <tr><td> 16.</td><td>2526ODDSEM</td><td nowrap>CALCULUS FOR ENGINEERS(UMA022)</td><td>MST</td><td align=right>30         </td><td align=left>   15</td><td align=left>   30</td><td align=left>   15</td><td> <font color=red> </font></td></tr>
+ <tr><td> 17.</td><td>2526ODDSEM</td><td nowrap>CALCULUS FOR ENGINEERS(UMA022)</td><td>SES</td><td align=right>30         </td><td align=left>   21</td><td align=left>   30</td><td align=left>   21</td><td> <font color=red> </font></td></tr>
+ <tr><td> 18.</td><td>2526ODDSEM</td><td nowrap>PROGRAMMING FOR PROBLEM SOLVING(UES103)</td><td>ENDSEM</td><td align=right>60         </td><td align=left>   29</td><td align=left>   40</td><td align=left>   19.33</td><td> <font color=red> </font></td></tr>
+ <tr><td> 19.</td><td>2526ODDSEM</td><td nowrap>PROGRAMMING FOR PROBLEM SOLVING(UES103)</td><td>SES#LE1</td><td align=right>30         </td><td align=left>   17</td><td align=left>   30</td><td align=left>   17</td><td> <font color=red> </font></td></tr>
+ <tr><td> 20.</td><td>2526ODDSEM</td><td nowrap>ENERGY AND ENVIRONMENT(UEN008)</td><td>ENDSEM</td><td align=right>80         </td><td align=left>   45</td><td align=left>   40</td><td align=left>   22.5</td><td> <font color=red> </font></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<br><br>
+<table align=center><tbody><tr><td align=left>
+<img src=data:,>
+</td>
+<td>
+<font size=4 style=FONT-FAMILY:ARIal><b>Campus Lynx</b></font>&nbsp;&nbsp;&nbsp;<font size=2 style=FONT-FAMILY:cursive>... an <b>IRP</b> Solution</font><br>
+A product of <strong>JIL Information Technology Ltd.</strong><br>
+<font size=2>For your comments or suggestions please send an email at <a tabindex=8 href=mailto:webkiosk@thapar.edu>webkiosk@thapar.edu</a></font>
+</td>
+</tr>
+</table>
+
+<script>
+function showMarks() {
+  document.getElementById('results-area').style.display = 'block';
+}
+</script>
+
+</body></html>

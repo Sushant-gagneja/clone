@@ -1,0 +1,189 @@
+<html>
+<meta charset=utf-8>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<style>
+/* ── Mobile overrides ── */
+@media (max-width: 768px) {
+  body { font-size: 13px !important; }
+  table { max-width: 100%; }
+  .sort-table td { padding: 3px 4px; white-space: nowrap; }
+  select { max-width: 160px; font-size: 12px; }
+  input[type=submit] { padding: 4px 12px; font-size: 12px; }
+  /* Horizontal scroll for wide tables */
+  .tbl-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; display: block; width: 100%; }
+}
+</style>
+<title>#### TIET [ View Student Grade Card (Eventwise) ] </title>
+<style>
+  .sort-table {
+    font: Icon;
+    border: 1px Solid ThreeDShadow;
+    background: window;
+    color: WindowText
+  }
+
+  .sort-table thead {
+    background: ButtonFace
+  }
+
+  .sort-table td {
+    padding: 2px 5px
+  }
+
+  .sort-table thead td {
+    border: 1px solid;
+    border-color: ButtonHighlight ButtonShadow ButtonShadow ButtonHighlight;
+    cursor: default
+  }
+
+  .sort-table thead td:active {
+    border-color: ButtonShadow ButtonHighlight ButtonHighlight ButtonShadow;
+    padding: 3px 4px 1px 6px
+  }
+
+  .sort-table thead td[_sortType=None]:active {
+    border-color: ButtonHighlight ButtonShadow ButtonShadow ButtonHighlight;
+    padding: 2px 5px
+  }
+
+  .sort-arrow {
+    width: 11px;
+    height: 11px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0 2px
+  }
+</style>
+<meta name=referrer content=no-referrer>
+<style>
+  img[src="data:,"],
+  source[src="data:,"] {
+    display: none !important
+  }
+</style>
+</head>
+
+<body alink=#ff00ff bgcolor=#fce9c5 rightmargin=0 leftmargin=0 topmargin=0 bottommargin=0>
+
+  <form name=frm onsubmit="return false;">
+    <table width=100% align=CENTER bottommargin=0 topmargin=0>
+      <tbody>
+        <tr>
+          <td align=middle>
+            <font color=#a52a2a style=FONT-SIZE:medium;FONT-FAMILY:verdana><b>Student Grade Card (Eventwise)</b></font>
+          </td>
+        </tr>
+    </table>
+
+    <table width=100% rules=groups cellspacing=1 cellpadding=1 align=center border=1>
+      <tbody>
+        <tr>
+          <td>
+            <font color=black face=arial size=2><strong> Name: </strong></font>
+            <font face=Vardana>Sushant Gagneja [1025030509]</font>
+            &nbsp;&nbsp;
+            <font color=black face=arial size=2><strong>Course/Branch: </strong></font>
+            <font face=Vardana>BE(COE)</font>
+            &nbsp;&nbsp;
+            <font color=black face=arial size=2><strong>Current Semester: </strong></font>
+            <font face=Vardana>2</font>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <font color=black face=arial size=2><strong> Exam Code</strong></font>
+            <select name=exam tabindex=0 id=exam style=WIDTH:120px>
+              <option selected value=ALL>ALL</option>
+              <option value=2526ODDSEM>2526ODDSEM</option>
+            </select>
+            <font color=black>
+              <font face=Arial size=2><strong>Subject</strong>&nbsp;&nbsp;</font>
+            </font>
+            <select name=Subject tabindex=0 id=Subject style=WIDTH:320px>
+              <option selected value=ALL>ALL</option>
+              <option value=250124>BOOT CAMP (UTA032) </option>
+              <option value=240202>CALCULUS FOR ENGINEERS (UMA022) </option>
+              <option value=230103>CHEMISTRY (UCB009) </option>
+              <option value=180089>ELECTRICAL &amp; ELECTRONIC ENGINEERING (UES013) </option>
+              <option value=230105>ENERGY AND ENVIRONMENT (UEN008) </option>
+              <option value=230104>PROGRAMMING FOR PROBLEM SOLVING (UES103) </option>
+            </select>
+            <input type=submit value=Show>
+          </td>
+        </tr>
+    </table>
+
+    <div class="tbl-wrap"><table align=center rules=Rows class=sort-table id=table-1 cellspacing=1 cellpadding=1 width=100% border=1>
+      <thead>
+        <tr bgcolor=#ff8c00>
+          <td nowrap><b>
+              <font color=white>Subject</font>
+            </b><img src=data:, class=sort-arrow></td>
+          <td nowrap><b>
+              <font color=white>Exam Code</font>
+            </b><img src=data:, class=sort-arrow></td>
+          <td nowrap><b>
+              <font color=white>Marks Obtained</font>
+            </b><img src=data:, class=sort-arrow></td>
+          <td nowrap><b>
+              <font color=white>Max. Marks</font>
+            </b><img src=data:, class=sort-arrow></td>
+          <td nowrap><b>
+              <font color=white>Grade Awarded</font>
+            </b><img src=data:, class=sort-arrow></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td nowrap>BOOT CAMP(UTA032)</td>
+          <td nowrap>2526ODDSEM</td>
+          <td nowrap> 96</td>
+          <td nowrap> 100</td>
+          <td nowrap align=center><b>A<b></b></b></td>
+        </tr>
+        <tr>
+          <td nowrap>CALCULUS FOR ENGINEERS(UMA022)</td>
+          <td nowrap>2526ODDSEM</td>
+          <td nowrap> 85.5</td>
+          <td nowrap> 100</td>
+          <td nowrap align=center><b>A-<b></b></b></td>
+        </tr>
+        <tr>
+          <td nowrap>CHEMISTRY(UCB009)</td>
+          <td nowrap>2526ODDSEM</td>
+          <td nowrap> 79.49</td>
+          <td nowrap> 100</td>
+          <td nowrap align=center><b>B<b></b></b></td>
+        </tr>
+        <tr>
+          <td nowrap>ELECTRICAL &amp; ELECTRONIC ENGINEERING(UES013)</td>
+          <td nowrap>2526ODDSEM</td>
+          <td nowrap> 94.85</td>
+          <td nowrap> 100</td>
+          <td nowrap align=center><b>A+<b></b></b></td>
+        </tr>
+        <tr>
+          <td nowrap>ENERGY AND ENVIRONMENT(UEN008)</td>
+          <td nowrap>2526ODDSEM</td>
+          <td nowrap> 64.55</td>
+          <td nowrap> 100</td>
+          <td nowrap align=center><b>B<b></b></b></td>
+        </tr>
+        <tr>
+          <td nowrap>PROGRAMMING FOR PROBLEM SOLVING(UES103)</td>
+          <td nowrap>2526ODDSEM</td>
+          <td nowrap>   81.5</td>
+          <td nowrap>   100</td>
+          <td nowrap align=center><b>A-<b></b></b></td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+
+  <font size=2 color=red face=arialblack>*This data is for information only and can be authenticated by the Academic
+    Section, TU. In case of discrepancy, please contact AR(Academic),TU.
+  </font>
+
+</body>
+
+</html>
